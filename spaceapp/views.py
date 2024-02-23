@@ -7,7 +7,7 @@ def message_view(request):
     if request.method == 'POST':
         form = UserMessageForm(request.POST)
         if form.is_valid():
-            UserMessage.objects.create(message=form.cleaned_data['message'])
+            form.save()
             return redirect('message_success')
 
     else:

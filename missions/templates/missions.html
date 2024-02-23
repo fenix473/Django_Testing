@@ -71,7 +71,7 @@
 </head>
 
 <body>
-    
+
 {% block content %}
 <div class="container">
     <div class="title">Current Missions</div>
@@ -87,6 +87,7 @@
     </div>
     <a href="{% url 'new_mission' %}" class="futuristic-btn">Create New Mission</a>
     <a href="{% url 'message_form' %}" class="futuristic-btn">Send a Message to Cosmos</a>
+    <button onclick="window.history.back();" class="futuristic-btn">Go Back</button>
 </div>
 {% endblock %}
 

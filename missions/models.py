@@ -6,6 +6,8 @@ class Missions(models.Model):
     description = models.TextField()
     launch_date = models.DateField()
 
+    def __str__(self):
+        return self.name
 class UserMessage(models.Model):
     message = models.TextField()
     created_at = models.DateTimeField(auto_now_add=True)

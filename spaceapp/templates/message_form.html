@@ -1,57 +1,11 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Submit Your Message - NASA Punk Future</title>
-<style>
-    body {
-        background-color: #000;
-        color: #0f0;
-        font-family: 'Roboto Condensed', 'Roboto', sans-serif;
-        text-align: center;
-    }
-    .container {
-        margin-top: 50px;
-    }
-    .title {
-        font-size: 3em;
-        text-transform: uppercase;
-        letter-spacing: 2px;
-    }
-    .subtitle {
-        color: #ff0;
-        font-size: 1.5em;
-    }
-    .content {
-        margin-top: 30px;
-        padding: 20px;
-    }
-    .futuristic-btn {
-        background-color: #005fff;
-        border: none;
-        color: white;
-        padding: 15px 32px;
-        text-align: center;
-        text-decoration: none;
-        display: inline-block;
-        font-size: 16px;
-        margin: 4px 2px;
-        cursor: pointer;
-        border-radius: 5px;
-        transition: background-color 0.3s ease-in-out;
-    }
-    .futuristic-btn:hover {
-        background-color: #ff00ff;
-    }
-    form {
-        display: inline-block;
-        margin-top: 20px;
-    }
-    textarea {
-        margin-top: 10px;
-    }
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Submit Your Message - NASA Punk Future</title>
+    <link href="{% static 'css/main.css' %}" rel="stylesheet">
 </head>
 <body>
 
@@ -65,7 +19,7 @@
             <button type="submit" class="futuristic-btn">Send Message</button>
             <a href="{% url 'view_messages' %}" class="futuristic-btn">View Messages</a>
         </form>
-        <button onclick="window.history.back();" class="futuristic-btn">Go Back</button>
+        <a href="{% url 'missions_page' %}" class="futuristic-btn">View Missions</a>
     </div>
 </div>
 

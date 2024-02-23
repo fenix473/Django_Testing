@@ -56,20 +56,28 @@
     }
 </style>
 </head>
+
 <body>
 
-<div class="container">
-    <div class="title">All Submitted Messages</div>
-    <div class="content">
-        {% for message in messages %}
-            <div class="message">{{ message.message }}</div>
-        {% empty %}
+    <div class="container">
+        <div class="title">All Submitted Messages</div>
+        <div class="content">
+            {% for message in messages %}
+            <div class="message">
+                <strong>Message:</strong> {{ message.message }}<br>
+                <!-- Display the name of the mission associated with each message -->
+                <strong>Mission:</strong> {{ message.mission.name }}<br>
+                <!-- Optionally, display the message creation date -->
+                <strong>Sent On:</strong> {{ message.created_at|date:"Y-m-d H:i" }}
+            </div>
+            {% empty %}
             <p>No messages have been submitted yet.</p>
-        {% endfor %}
-        <a href="{% url 'message_form' %}" class="futuristic-btn">Send a New Message</a>
-        <button onclick="window.history.back();" class="futuristic-btn">Go Back</button>
+            {% endfor %}
+            <a href="{% url 'message_form' %}" class="futuristic-btn">Send a New Message</a>
+            <button onclick="window.history.back();" class="futuristic-btn">Go Back</button>
+        </div>
     </div>
-</div>
 
 </body>
+
 </html>

@@ -7,4 +7,4 @@ class UserMessageForm(forms.Form):
 class UserMessageForm(forms.ModelForm):
     class Meta:
         model = UserMessage
-        fields = ['message']
+        fields = ['message','mission']
