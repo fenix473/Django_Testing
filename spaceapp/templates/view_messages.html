@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>View Messages - NASA Punk Future</title>
+<style>
+    body {
+        background-color: #000;
+        color: #0f0;
+        font-family: 'Roboto Condensed', 'Roboto', sans-serif;
+        text-align: center;
+    }
+    .container {
+        margin-top: 50px;
+    }
+    .title {
+        font-size: 3em;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+    }
+    .subtitle {
+        color: #ff0;
+        font-size: 1.5em;
+    }
+    .content {
+        margin-top: 30px;
+        padding: 20px;
+    }
+    .futuristic-btn {
+        background-color: #005fff;
+        border: none;
+        color: white;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        cursor: pointer;
+        border-radius: 5px;
+        transition: background-color 0.3s ease-in-out;
+    }
+    .futuristic-btn:hover {
+        background-color: #ff00ff;
+    }
+    .message {
+        background: #222;
+        color: #fff;
+        margin-bottom: 10px;
+        padding: 10px;
+        border-radius: 5px;
+    }
+</style>
+</head>
+<body>
+
+<div class="container">
+    <div class="title">All Submitted Messages</div>
+    <div class="content">
+        {% for message in messages %}
+            <div class="message">{{ message.message }}</div>
+        {% empty %}
+            <p>No messages have been submitted yet.</p>
+        {% endfor %}
+        <a href="{% url 'message_form' %}" class="futuristic-btn">Send a New Message</a>
+    </div>
+</div>
+
+</body>
+</html>

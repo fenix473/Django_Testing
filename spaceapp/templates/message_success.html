@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Message Received - NASA Punk Future</title>
+<style>
+    body {
+        background-color: #000;
+        color: #0f0;
+        font-family: 'Roboto Condensed', 'Roboto', sans-serif;
+        text-align: center;
+    }
+    .container {
+        margin-top: 50px;
+    }
+    .title {
+        font-size: 3em;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+    }
+    .subtitle {
+        color: #ff0;
+        font-size: 1.5em;
+    }
+    .content {
+        margin-top: 30px;
+        padding: 20px;
+    }
+    .futuristic-btn {
+        background-color: #005fff;
+        border: none;
+        color: white;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        cursor: pointer;
+        border-radius: 5px;
+        transition: background-color 0.3s ease-in-out;
+    }
+    .futuristic-btn:hover {
+        background-color: #ff00ff;
+    }
+    a {
+        text-decoration: none;
+        color: inherit; /* Ensure links are styled in harmony with the button's text color */
+    }
+</style>
+</head>
+<body>
+
+<div class="container">
+    <div class="title">Transmission Successful</div>
+    <div class="subtitle">Your message has been launched into the cosmos</div>
+    <div class="content">
+        <p>Your message has been successfully received. Thank you for contributing to the future of space exploration.</p>
+        <a href="{% url 'message_form' %}" class="futuristic-btn">Send Another Message</a>
+    </div>
+</div>
+
+</body>
+</html>
