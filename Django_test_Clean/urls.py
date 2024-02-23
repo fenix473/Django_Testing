@@ -22,5 +22,4 @@ urlpatterns = [
     path('playground/', include('playground.urls')),
     path('spaceapp/', include('spaceapp.urls')),
     path('missions/', include('missions.urls')),
-    
 ]
